@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA SPACE APP CHALLENGE</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="img/logo.png" alt="Logo" width="40" height="40"></div>
+        <nav>
+            <ul>
+                <li class="nav-item"><a href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a href="#planetas">Planetas</a></li>
+                <li class="nav-item"><a href="#ojos">Ojos</a></li>
+                <li class="nav-item"><a href="#juegos">Juegos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h1>Inicio</h1>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="img/sol.png" alt="Imagen 1">
+                        <p class="slide-text">Texto para la imagen 1</p>
+                    </div>
+                    <div class="slide">
+                        <img src="img/slide2.jpg" alt="Imagen 2">
+                        <p class="slide-text">Texto para la imagen 2</p>
+                    </div>
+                    <div class="slide">
+                        <img src="img/slide3.jpg" alt="Imagen 3">
+                        <p class="slide-text">Texto para la imagen 1</p>
+                    </div>
+                    <div class="slide">
+                        <img src="img/slide4.jpg" alt="Imagen 4">
+                        <p class="slide-text">Texto para la imagen 2</p>
+                    </div>
+                    <div class="slide">
+                        <img src="img/slide5.jpg" alt="Imagen 5">
+                        <p class="slide-text">Texto para la imagen 1</p>
+                    </div>
+                    <div class="slide">
+                        <img src="img/slide6.jpg" alt="Imagen 6">
+                        <p class="slide-text">Texto para la imagen 2</p>
+                    </div>
+                    <div class="slide">
+                        <img src="img/slide7.jpg" alt="Imagen 7">
+                        <p class="slide-text">Texto para la imagen 1</p>
+                    </div>
+                    <div class="slide">
+                        <img src="img/slide8.jpg" alt="Imagen 8">
+                        <p class="slide-text">Texto para la imagen 2</p>
+                    </div>
+                    <div class="slide">
+                        <img src="img/slide9.jpg" alt="Imagen 9">
+                        <p class="slide-text">Texto para la imagen 9</p>
+                    </div>
+                </div>
+                <button class="slider-btn prev">&lt;</button>
+                <button class="slider-btn next">&gt;</button>
+            </div>
+        </section>
+
+        <section id="planetas">
+            <h1>Planetas</h1>
+            <div class="sistema-solar">
+                <button class="planeta sol" data-video="sol.mp4">Sol</button>
+                <button class="planeta mercurio" data-video="mercurio.mp4">Mercurio</button>
+                <button class="planeta venus" data-video="venus.mp4">Venus</button>
+                <button class="planeta tierra" data-video="tierra.mp4">Tierra</button>
+                <button class="planeta marte" data-video="marte.mp4">Marte</button>
+                <button class="planeta jupiter" data-video="jupiter.mp4">Júpiter</button>
+                <button class="planeta saturno" data-video="saturno.mp4">Saturno</button>
+                <button class="planeta urano" data-video="urano.mp4">Urano</button>
+                <button class="planeta neptuno" data-video="neptuno.mp4">Neptuno</button>
+            </div>
+            <div id="video-popup" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <video id="planet-video" controls>
+                        <source src="" type="video/mp4">
+                        Tu navegador no soporta el tag de video.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="ojos">
+            <h1>Ojos</h1>
+            <div class="ojos-container">
+                <select id="pagina-selector">
+                    <option value="">Selecciona una página</option>
+                    <option value="https://eyes.nasa.gov/apps/solar-system/#/home">Ojos en el sistema Solar</option>
+                    <option value="https://eyes.nasa.gov/apps/mars2020/#/home">Mision de Marte 2020</option>
+                    <option value="https://eyes.nasa.gov/apps/orrery/">Sistema Solar Orrery</option>
+                    <option value="https://eyes.nasa.gov/apps/exo/">Exploracion de Exoplanetas</option>
+                    <option value="https://eyes.nasa.gov/apps/asteroids/#/home">Asteorides</option>
+                    <option value="https://eyes.nasa.gov/apps/earth/#/">La Tierra</option>
+                </select>
+                <div class="iframe-container">
+                    <iframe id="pagina-iframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="juegos">
+            <h1>Juegos</h1>
+            <!-- Contenido de la sección Juegos -->
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

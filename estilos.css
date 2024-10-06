@@ -1,0 +1,351 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+
+section, div, main {
+    position: relative;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #1D0144, #20018D);
+    color: white;
+    padding:10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1001;
+}
+
+nav {
+    margin-left: auto;
+    padding: 10px;
+    z-index: 1000;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: normal;
+        cursor: default;
+}
+nav ul li a:hover {
+    color: #ddd;
+    cursor: default;
+}
+
+.logo {
+    position: absolute;
+    left: 10px;
+    padding: 30px;
+}
+
+.nav-item {
+    position: relative;
+    padding: 0 15px;
+}
+
+.nav-item:not(:last-child)::after {
+    content: '/';
+    position: absolute;
+    right: -5px;
+    color: white;
+}
+
+main {
+    margin-top: 60px;
+    padding: 0;
+}
+
+#inicio {
+    background-image: url(img/fondoslider.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150vh;  
+    margin: 0;
+    padding: auto;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* PLANETAS */
+
+#planetas {
+    background-image: url(img/por-que-el-espacio-exterior-es-oscuro-si-esta-repleto-de-estrellas-1708088903182_1280.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;  
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sistema-solar {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+}
+
+.planeta {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+    background-size: cover;
+}
+
+/* Definir las imágenes de los planetas */
+.mercurio {
+    background-image: url(img/mercurio.png);
+    background-color: #ccc;
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+}
+.venus {
+    background-image: url(img/venus.png);
+    background-color: #ccc;
+}
+.tierra {
+    background-image: url(img/tierra.png);
+    background-color: #ccc;
+}
+.marte {
+    background-image: url(img/marte.png);
+    background-color: #ccc;
+}
+.jupiter {
+    background-image: url(img/jupiter.png);
+    background-color: #ccc;
+}
+.saturno {
+    background-image: url(img/saturno.png);
+    background-color: #ccc;
+}
+.urano {
+    background-image: url(img/urano.png);
+    background-color: #ccc;
+}
+.neptuno {
+    background-image: url(img/neptuno.png);
+    background-color: #ccc;
+}
+
+
+.sol {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(img/sol.png);
+    background-color: #000;
+    width: 80px;
+    height: 80px;
+    z-index: 10;
+}
+
+.mercurio, .venus, .tierra, .marte, .jupiter, .saturno, .urano, .neptuno {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mercurio { animation: orbit 8s linear infinite; }
+.venus { animation: orbit 12s linear infinite; }
+.tierra { animation: orbit 16s linear infinite; }
+.marte { animation: orbit 20s linear infinite; }
+.jupiter { animation: orbit 24s linear infinite; }
+.saturno { animation: orbit 28s linear infinite; }
+.urano { animation: orbit 32s linear infinite; }
+.neptuno { animation: orbit 36s linear infinite; }
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translate(var(--orbit-radius)) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translate(var(--orbit-radius)) rotate(-360deg);
+    }
+}
+
+.mercurio { --orbit-radius: 90px;}
+.venus { --orbit-radius: 110px; }
+.tierra { --orbit-radius: 130px; }
+.marte { --orbit-radius: 150px; }
+.jupiter { --orbit-radius: 190px; }
+.saturno { --orbit-radius: 210px; }
+.urano { --orbit-radius: 230px; }
+.neptuno { --orbit-radius: 250px; }
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+}
+
+.close {
+    color: red;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#planet-video {
+    width: 100%;
+    max-width: 760px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* OJOS */
+#ojos {
+    background:linear-gradient(to bottom right, #000, #151426);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.ojos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#pagina-selector {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 50px;
+    background:linear-gradient(to bottom right, #000, #fff, #000);
+    border: none;
+}
+
+.iframe-container {
+    width: 400%;
+    height: 600px;
+    max-width: 1200px;
+}
+
+#pagina-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
